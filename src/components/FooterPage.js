@@ -5,38 +5,9 @@ class FooterPage extends React.Component {
   render () {
     return (
       <MDBFooter
-        color="purple darken-1"
-        className="page-footer font-small pt-0"
+        color="blue darken-1"
+        className="page-footer font-small pt-5"
       >
-        <div style={{ backgroundColor: 'cyan' }}>
-          <MDBContainer fluid className="text-center text-md-left">
-            <MDBRow className="py-4 d-flex align-items-center">
-              <MDBCol
-                md="6"
-                lg="5"
-                className="text-center text-md-left mb-4 mb-md-0"
-              >
-                <h6 className="mb-0 black-text">
-                  Get connected with me on social media!
-                </h6>
-              </MDBCol>
-              <MDBCol md="6" lg="7" className="text-center text-md-right">
-                <a className="gh-ic ml-0" href="https://github.com">
-                  <i className="fab fa-github black-text mr-4"> </i>
-                </a>
-                <a className="tw-ic" href="https://twitter.com">
-                  <i className="fab fa-twitter black-text mr-4"> </i>
-                </a>
-                <a
-                  className="li-ic"
-                  href="https://linkedin.com"
-                >
-                  <i className="fab fa-linkedin black-text mr-4"> </i>
-                </a>
-              </MDBCol>
-            </MDBRow>
-          </MDBContainer>
-        </div>
         <MDBContainer className="mt-5 mb-4 text-center text-md-left">
           <MDBRow className="mt-3">
             <MDBCol md="4" className="mb-4">

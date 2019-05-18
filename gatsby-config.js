@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Static Single Page React App Template',
+    title: 'Gatsby Employee Directory',
     description: 'Built with React, MDbootstrap, and Gatsby',
     siteUrl: 'https://example.com',
     author: 'jacob-cavazos'
@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `react-gatsby-template`,
-        short_name: `MDBReact Template`,
+        name: `gatsby-employee-directory`,
+        short_name: `Directory`,
         start_url: `/`,
         display: `standalone`,
         icon: 'src/images/icon.png'
