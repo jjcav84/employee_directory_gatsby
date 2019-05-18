@@ -1,10 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import NavPage from '../components/NavPage'
-import FooterPage from '../components/FooterPage'
+import Layout from '../components/layout'
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <Helmet>
       <title>MDBootstrap React Template</title>
       <meta
@@ -15,9 +14,7 @@ const IndexPage = () => (
       <meta name="author" content="Jacob Cavazos" />
       <link rel="canonical" href="" />
     </Helmet>
-    <NavPage />
-    <FooterPage />
-  </div>
+  </Layout>
 )
 
 export default IndexPage
