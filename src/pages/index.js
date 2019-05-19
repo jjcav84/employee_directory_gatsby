@@ -2,6 +2,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 
+const divStyle = {
+  marginTop: '130px'
+}
+
 const IndexPage = () => (
   <Layout>
     <Helmet>
@@ -14,6 +18,9 @@ const IndexPage = () => (
       <meta name="author" content="Jacob Cavazos" />
       <link rel="canonical" href="" />
     </Helmet>
+    <div style={divStyle}>
+      <h1>Employee Directory</h1>
+    </div>
   </Layout>
 )
 

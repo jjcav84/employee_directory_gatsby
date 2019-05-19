@@ -5,7 +5,7 @@ import FooterPage from './FooterPage'
 export default ({ children }) => (
   <div>
     <NavPage />
-    <FooterPage />
     {children}
+    <FooterPage />
   </div>
 )
