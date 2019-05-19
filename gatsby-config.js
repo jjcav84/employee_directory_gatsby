@@ -24,11 +24,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-employee-directory`,
+        name: `gatsby-site-employee-directory`,
         short_name: `Directory`,
         start_url: `/`,
         display: `standalone`,
-        icon: 'src/images/icon.png'
+        icon: 'src/images/LogoTransparent.png'
       }
     },
     {
@@ -37,6 +37,14 @@ module.exports = {
         host: 'https://www.example.com',
         sitemap: 'https://www.example.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: 'RICKNMORTY',
+        fieldName: 'ricknmorty',
+        url: 'https://rickandmortyapi.com/graphql'
       }
     }
     //  {
