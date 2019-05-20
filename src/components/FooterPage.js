@@ -6,7 +6,7 @@ class FooterPage extends React.Component {
     return (
       <MDBFooter
         color="blue darken-1"
-        className="page-footer font-small pt-5"
+        className="page-footer font-small pt-1 mt-4"
       >
         <MDBContainer className="mt-5 mb-4 text-center text-md-left">
           <MDBRow className="mt-3">
