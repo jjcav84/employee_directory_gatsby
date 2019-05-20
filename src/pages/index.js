@@ -1,9 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
+import EmployeeCard from '../components/EmployeeCard'
 
-const divStyle = {
-  marginTop: '130px'
+const h1Style = {
+  marginTop: '135px',
+  marginBottom: '-15px'
 }
 
 const IndexPage = () => (
@@ -18,8 +20,14 @@ const IndexPage = () => (
       <meta name="author" content="Jacob Cavazos" />
       <link rel="canonical" href="" />
     </Helmet>
-    <div style={divStyle}>
+    <div style={h1Style} className="text-center pb-4">
       <h1>Employee Directory</h1>
+    </div>
+    <div className="pb-4">
+      <EmployeeCard />
+    </div>
+    <div>
+      <EmployeeCard />
     </div>
   </Layout>
 )
