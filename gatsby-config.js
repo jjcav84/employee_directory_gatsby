@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-source-graphql`,
       options: {
-        typeName: 'RICKNMORTY',
-        fieldName: 'ricknmorty',
+        typeName: 'rmAPI',
+        fieldName: 'rickAndMortyAPI',
         url: 'https://rickandmortyapi.com/graphql'
       }
     }
