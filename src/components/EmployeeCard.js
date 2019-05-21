@@ -1,71 +1,42 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, MDBRow } from 'mdbreact'
 
-const EmployeeCard = () => {
-  return (
-    <MDBRow className="mx-auto">
-    <MDBCol>
-      <MDBCard className="mx-auto mb-4" style={{ width: '19rem' }}>
-        <MDBCardImage src="https://rickandmortyapi.com/api/character/avatar/298.jpeg" waves hover top />
-        <MDBCardBody>
-          <MDBCardTitle>Employee Name</MDBCardTitle>
-          <MDBCardText>
-           <p className="border-bottom border-dark"> Status</p>
-           <p className="border-bottom border-dark"> Species</p>
-           <p className="border-bottom border-dark"> Gender</p>
-           <p className="border-bottom border-dark"> Origin</p>
-           <p>Last Location</p>
-          </MDBCardText>
-        </MDBCardBody>
-      </MDBCard>
-    </MDBCol>
-    <MDBCol>
-      <MDBCard className="mx-auto mb-4" style={{ width: '19rem' }}>
-        <MDBCardImage src="https://rickandmortyapi.com/api/character/avatar/84.jpeg" waves hover top />
-        <MDBCardBody>
-          <MDBCardTitle>Employee Name</MDBCardTitle>
-          <MDBCardText>
-           <p className="border-bottom border-dark"> Status</p>
-           <p className="border-bottom border-dark"> Species</p>
-           <p className="border-bottom border-dark"> Gender</p>
-           <p className="border-bottom border-dark"> Origin</p>
-           <p>Last Location</p>
-          </MDBCardText>
-        </MDBCardBody>
-      </MDBCard>
-    </MDBCol>
-    <MDBCol>
-      <MDBCard className="mx-auto mb-4" style={{ width: '19em' }}>
-        <MDBCardImage src="https://rickandmortyapi.com/api/character/avatar/165.jpeg" waves hover top />
-        <MDBCardBody>
-          <MDBCardTitle>Employee Name</MDBCardTitle>
-          <MDBCardText>
-           <p className="border-bottom border-dark"> Status</p>
-           <p className="border-bottom border-dark"> Species</p>
-           <p className="border-bottom border-dark"> Gender</p>
-           <p className="border-bottom border-dark"> Origin</p>
-           <p>Last Location</p>
-          </MDBCardText>
-        </MDBCardBody>
-      </MDBCard>
-    </MDBCol>
-    <MDBCol>
-      <MDBCard className="mx-auto mb-4" style={{ width: '19em' }}>
-        <MDBCardImage src="https://rickandmortyapi.com/api/character/avatar/77.jpeg" waves hover top />
-        <MDBCardBody>
-          <MDBCardTitle>Employee Name</MDBCardTitle>
-          <MDBCardText>
-           <p className="border-bottom border-dark"> Status</p>
-           <p className="border-bottom border-dark"> Species</p>
-           <p className="border-bottom border-dark"> Gender</p>
-           <p className="border-bottom border-dark"> Origin</p>
-           <p>Last Location</p>
-          </MDBCardText>
-        </MDBCardBody>
-      </MDBCard>
-    </MDBCol>
-    </MDBRow>
-  )
-}
+const Count = 493
 
-export default EmployeeCard
+export default () => (
+  <StaticQuery
+    query={graphql`
+      {
+        rickAndMortyAPI {
+          character(id: 1) {
+            name
+            image
+            status
+            species
+            gender
+          }
+        }
+      }
+    `}
+    render={data => (
+      <MDBRow className="mx-auto">
+        <MDBCol>
+          <MDBCard className="mx-auto" style={{ width: '19rem' }}>
+            <div>
+              <MDBCardImage src={data.rickAndMortyAPI.character.image} waves hover top />
+            </div>
+            <MDBCardBody>
+              <MDBCardTitle>{data.rickAndMortyAPI.character.name}</MDBCardTitle>
+              <MDBCardText>
+                <p className="border-bottom border-dark">{data.rickAndMortyAPI.character.status}</p>
+                <p className="border-bottom border-dark">{data.rickAndMortyAPI.character.species}</p>
+                <p className="border-bottom border-dark">{data.rickAndMortyAPI.character.gender}</p>
+              </MDBCardText>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
+    )}
+  />
+)
