@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Employee Directory',
     description: 'Built with React, MDbootstrap, and Gatsby',
     siteUrl: 'https://example.com',
-    author: 'jacob-cavazos'
+    author: 'Jacob Cavazos'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
