@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Employee Directory',
-    description: 'Built with React, MDbootstrap, and Gatsby',
+    description: 'Rick and Morty Employee Directory built with React, MDbootstrap, Gatsby, and the Rick and Morty API',
     siteUrl: 'https://example.com',
-    author: 'Jacob Cavazos'
+    author: 'Jacob Cavazos',
+    keywords: 'React, Bootstrap, Gatsby, Material Design, directory, Rick and Morty API'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
