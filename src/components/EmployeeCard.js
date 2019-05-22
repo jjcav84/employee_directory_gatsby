@@ -2,14 +2,13 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, MDBRow } from 'mdbreact'
 
-const Count = 493
-
 export default () => (
   <StaticQuery
     query={graphql`
       {
         rickAndMortyAPI {
           character(id: 1) {
+            id
             name
             image
             status
