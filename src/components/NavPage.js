@@ -20,7 +20,7 @@ class NavPage extends Component {
         <MDBNavbar color="teal accent-2" light expand="md" fixed="top">
           <Link to="/">
             <Animation type="bounce" duration="2s">
-              <img src={src1} type="image/png" height="100" alt="" waves />
+              <img src={src1} type="image/png" height="80" alt="" waves />
             </Animation>
           </Link>
           <MDBNavbarToggler tag="button" className="aqua-gradient" onClick={this.toggleCollapse('navbarCollapse')} />

@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import EmployeeCard from '../components/EmployeeCard'
 
 const h1Style = {
-  marginTop: '135px',
+  marginTop: '115px',
   marginBottom: '-15px'
 }
 
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
         content="Static single page web app directory site built with React, MDBootstrap, and Gatsby"
       />
       <meta name="keywords" content="React, Bootstrap, Gatsby, Material Design, directory" />
-      <meta name="author" content="Jacob Cavazos" />
+      <meta name="author" content={data.site.siteMetadata.author} />
       <link rel="canonical" href="" />
     </Helmet>
     <div style={h1Style} className="text-center pb-4">
@@ -35,6 +35,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        author
       }
     }
   }
