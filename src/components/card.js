@@ -13,36 +13,30 @@ const Card = props => {
   const id = 1
 
   return (
-    <div>
-      <MDBRow className="mx-auto">
-        <MDBCol>
-          <MDBCard className="mx-auto" style={{ width: '19rem' }}>
-            <MDBCardImage src={src} alt="employee picture" hover top />
-            <MDBCardBody>
-              <MDBCardTitle>
-                <span>{name}</span>
-              </MDBCardTitle>
-              <div>
-                <MDBCardText tag="div">
-                  <div className="pb-1">
-                    <span className="border-bottom border-dark">Status: {status}</span>
-                  </div>
-                  <div className="pb-1">
-                    <span className="border-bottom border-dark">Species: {species}</span>
-                  </div>
-                  <div className="pb-1">
-                    <span className="border-bottom border-dark">Gender: {gender}</span>
-                  </div>
-                  <div className="pb-1">
-                    <span className="border-bottom border-dark">Employee ID: {id}</span>
-                  </div>
-                </MDBCardText>
+    <MDBRow className="mx-auto">
+      <MDBCol>
+        <MDBCard className="mx-auto" style={{ width: '19rem' }}>
+          <MDBCardImage src={src} alt="employee picture" hover top />
+          <MDBCardBody>
+            <MDBCardTitle tag="span">{name}</MDBCardTitle>
+            <MDBCardText tag="div">
+              <div className="pb-1">
+                <span className="border-bottom border-dark">Status: {status}</span>
               </div>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </div>
+              <div className="pb-1">
+                <span className="border-bottom border-dark">Species: {species}</span>
+              </div>
+              <div className="pb-1">
+                <span className="border-bottom border-dark">Gender: {gender}</span>
+              </div>
+              <div className="pb-1">
+                <span className="border-bottom border-dark">Employee ID: {id}</span>
+              </div>
+            </MDBCardText>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+    </MDBRow>
   )
 }
 
