@@ -1,14 +1,19 @@
+// external imports
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import Layout from '../components/layout'
-import EmployeeCard from '../components/EmployeeCard'
 
+// internal component imports
+import Layout from '../components/layout'
+import Card from '../components/card'
+
+// for inline styling of h1 tag
 const h1Style = {
   marginTop: '115px',
   marginBottom: '-15px'
 }
 
+// React index component
 const IndexPage = props => {
   return (
     <Layout>
@@ -23,11 +28,14 @@ const IndexPage = props => {
         <h1>{props.data.site.siteMetadata.title}</h1>
       </div>
       <div className="pb-4">
-        <EmployeeCard />
+        <Card />
       </div>
     </Layout>
   )
 }
+
+// graphql query to site metadata in gatsby-config.js file
+// graphql query to rick and morty api data from all characters
 export const pageQuery = graphql`
   query IndexQuery {
     site {
