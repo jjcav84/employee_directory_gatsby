@@ -9,6 +9,8 @@ module.exports = {
     keywords: 'React, Bootstrap, Gatsby, Material Design, directory, Rick and Morty API'
   },
   plugins: [
+    // plugin to create _headers file for netlify
+    `gatsby-plugin-netlify`,
     // plugin to create helmet component to inject code into head html tag
     `gatsby-plugin-react-helmet`,
     {
