@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/11e6687f-a8a2-45cd-9591-79439a0e231a/deploy-status)](https://app.netlify.com/sites/gatsbyemployeedirectory/deploys)
 # Employee Directory Code Challenge
 
 ## Built with [MDBootstrap](https://mdbootstrap.com/react/), [React](https://reactjs.org/), and [GatsbyJS](https://gatsbyjs.org)
