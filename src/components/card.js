@@ -1,8 +1,8 @@
-//external imports
+// external imports
 import React from 'react'
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, MDBRow } from 'mdbreact'
 
-//card component to display employee's image and data pulled from the API
+// card component to display employee's image and data pulled from the API
 const Card = props => {
   return (
     <MDBRow className="mx-auto">
@@ -16,7 +16,8 @@ const Card = props => {
             <MDBCardText>
               <p className="border-bottom border-dark">{props.status}</p>
               <p className="border-bottom border-dark">{props.species}</p>
-              <p>{props.gender}</p>
+              <p className="border-bottom border-dark">{props.gender}</p>
+              <p>{props.id}</p>
             </MDBCardText>
           </MDBCardBody>
         </MDBCard>

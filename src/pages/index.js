@@ -50,6 +50,7 @@ export const pageQuery = graphql`
     rickAndMortyAPI {
       characters {
         results {
+          id
           name
           image
           status
