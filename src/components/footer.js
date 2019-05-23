@@ -33,15 +33,15 @@ class Footer extends React.Component {
                 style={{ width: '85px' }}
               />
               <p>
-                <a href="https://linkedin.com">
+                <a href="https://linkedin.com/jacobjessecavazos/">
                   My LinkedIn
                 </a>
               </p>
               <p>
-                <a href="https://github.com">My Github</a>
+                <a href="https://github.com/jjcav84/">My Github</a>
               </p>
               <p>
-                <a href="https://twitter.com">My Twitter</a>
+                <a href="https://twitter.com/jcavazos84">My Twitter</a>
               </p>
             </MDBCol>
             <MDBCol md="3" className="mb-4">
@@ -57,6 +57,11 @@ class Footer extends React.Component {
                   Material Design for Bootstrap
                 </a>
               </p>
+              <p>
+                <a href="https://gatsbyjs.org">
+                  Gatsby
+                </a>
+              </p>
             </MDBCol>
             <MDBCol md="3" className="mb-4">
               <h6 className="text-uppercase font-weight-bold">
@@ -68,10 +73,10 @@ class Footer extends React.Component {
               />
               <p>
                 <i className="fa fa-envelope mr-3" />
-                <a href="mailto:admin@yourdomainname.com">admin@yourdomainname.com</a>
+                <a href="mailto:jake@jacobcavazos.com">jake@jacobcavazos.com</a>
               </p>
               <p>
-                <i className="fa fa-phone mr-3" /> +1 (210) 123-590
+                <i className="fa fa-phone mr-3" /> +1 (210) 724-5909
               </p>
             </MDBCol>
           </MDBRow>

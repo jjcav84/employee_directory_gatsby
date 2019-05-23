@@ -8,8 +8,8 @@ import Footer from './footer'
 // React Layout component
 export default ({ children }) => (
   <div>
-    <NavPage />
+    <Navbar />
     {children}
-    <FooterPage />
+    <Footer />
   </div>
 )
