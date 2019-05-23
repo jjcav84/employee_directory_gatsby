@@ -15,6 +15,7 @@ const h1Style = {
 
 // React index component
 const IndexPage = props => {
+  console.log(props)
   return (
     <Layout>
       <Helmet>
@@ -33,6 +34,8 @@ const IndexPage = props => {
     </Layout>
   )
 }
+
+export default IndexPage
 
 // graphql query to site metadata in gatsby-config.js file
 // graphql query to rick and morty api data from all characters
@@ -61,5 +64,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default IndexPage
