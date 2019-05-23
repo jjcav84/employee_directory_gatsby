@@ -1,7 +1,9 @@
+// internal imports
 import React from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdbreact'
 
-class FooterPage extends React.Component {
+// React footer component
+class Footer extends React.Component {
   render () {
     return (
       <MDBFooter
@@ -84,4 +86,4 @@ class FooterPage extends React.Component {
   }
 }
 
-export default FooterPage
+export default Footer

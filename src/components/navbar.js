@@ -1,9 +1,13 @@
+// external imports
 import React, { Component } from 'react'
 import { MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, Animation } from 'mdbreact'
 import { Link } from 'gatsby'
-import src1 from '../images/LogoTransparent.png'
 
-class NavPage extends Component {
+// internal import maybe image should be in static directory?
+import src1 from '../images/logo.png'
+
+// React component for navbar
+class Navbar extends Component {
   state = {
     collapseID: ''
   }
@@ -34,4 +38,4 @@ class NavPage extends Component {
   }
 }
 
-export default NavPage
+export default Navbar
