@@ -18,18 +18,18 @@ const Card = props => {
         <MDBCard className="mx-auto" style={{ width: '19rem' }}>
           <MDBCardImage src={src} alt="employee picture" hover top />
           <MDBCardBody>
-            <MDBCardTitle tag="span">{name}</MDBCardTitle>
+            <MDBCardTitle tag="h3">{name}</MDBCardTitle>
             <MDBCardText tag="div">
-              <div className="pb-1">
+              <div className="pb-2">
                 <span className="border-bottom border-dark">Status: {status}</span>
               </div>
-              <div className="pb-1">
+              <div className="pb-2">
                 <span className="border-bottom border-dark">Species: {species}</span>
               </div>
-              <div className="pb-1">
+              <div className="pb-2">
                 <span className="border-bottom border-dark">Gender: {gender}</span>
               </div>
-              <div className="pb-1">
+              <div className="pb-2">
                 <span className="border-bottom border-dark">Employee ID: {id}</span>
               </div>
             </MDBCardText>
