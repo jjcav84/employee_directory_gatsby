@@ -1,13 +1,14 @@
 // External imports
 import React from 'react'
 import PropTypes from 'prop-types'
+import { MDBRow } from 'mdbreact'
 
 // Internal Component import
 import Card from './card'
 
 const CardRow = props => {
   return (
-    <div>
+    <MDBRow>
       {props.cards.map(card => {
         return (
           <Card
@@ -17,14 +18,15 @@ const CardRow = props => {
             species={card.species}
             gender={card.gender}
             id={card.id}
+            key={card.id}
           />
         )
       })}
-    </div>
+    </MDBRow>
   )
 }
 
-CardRow.PropTypes = {
+CardRow.propTypes = {
   cards: PropTypes.array
 }
 

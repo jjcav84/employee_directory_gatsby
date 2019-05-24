@@ -5,12 +5,11 @@ import { Helmet } from 'react-helmet'
 
 // internal component imports
 import Layout from '../components/layout'
-import Card from '../components/card'
 import CardRow from '../components/row'
 
 // for inline styling of h1 tag
 const h1Style = {
-  marginTop: '115px',
+  marginTop: '140px',
   marginBottom: '-15px'
 }
 
@@ -30,14 +29,14 @@ const IndexPage = props => {
     })
 
     return cardArray.map(card => {
-      if (cardRow.length === 4) {
+      if (cardRow.length === 3) {
         cardRow = []
       }
 
       cardRow.push(card)
       count++
 
-      if (cardRow.length === 4) {
+      if (cardRow.length === 3) {
         return returnRow(cardRow, count)
       } else if (cardArray.length - count === 0) {
         return returnRow(cardRow, count)
@@ -46,7 +45,7 @@ const IndexPage = props => {
   }
 
   const returnRow = (cards, count) => {
-    return <CardRow cards={cards} id={count} />
+    return <CardRow cards={cards} key={count} />
   }
 
   console.log(props)
