@@ -1,10 +1,10 @@
 // External imports
-import React from 'react'
-import PropTypes from 'prop-types'
-import { MDBRow } from 'mdbreact'
+import React from "react"
+import PropTypes from "prop-types"
+import { MDBRow } from "mdbreact"
 
 // Internal Component import
-import Card from './card'
+import Card from "./card"
 
 const CardRow = props => {
   return (
@@ -27,7 +27,7 @@ const CardRow = props => {
 }
 
 CardRow.propTypes = {
-  cards: PropTypes.array
+  cards: PropTypes.array,
 }
 
 export default CardRow

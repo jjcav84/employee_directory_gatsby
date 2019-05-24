@@ -1,16 +1,16 @@
 // external imports
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import React from "react"
+import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 // internal component imports
-import Layout from '../components/layout'
-import CardRow from '../components/row'
+import Layout from "../components/layout"
+import CardRow from "../components/row"
 
 // for inline styling of h1 tag
 const h1Style = {
-  marginTop: '140px',
-  marginBottom: '-15px'
+  marginTop: "140px",
+  marginBottom: "-15px",
 }
 
 // React index component
@@ -54,7 +54,10 @@ const IndexPage = props => {
     <Layout>
       <Helmet>
         <title>{props.data.site.siteMetadata.title}</title>
-        <meta name="description" content={props.data.site.siteMetadata.description} />
+        <meta
+          name="description"
+          content={props.data.site.siteMetadata.description}
+        />
         <meta name="keywords" content={props.data.site.siteMetadata.keywords} />
         <meta name="author" content={props.data.site.siteMetadata.author} />
         <link rel="canonical" href={props.data.site.siteMetadata.siteUrl} />
