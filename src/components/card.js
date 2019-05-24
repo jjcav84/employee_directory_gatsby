@@ -5,21 +5,13 @@ import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, 
 
 // card component to display employee's image and data pulled from the API
 const Card = props => {
-  // props passed from Index component graphql query to Rick and Morty API
-  /*  const src = card.results.image
-  const name = card.name
-  const status = card.status
-  const species = card.species
-  const gender = card.gender
-  const id = card.id */
-
   return (
-    <MDBRow className="mx-auto">
+    <MDBRow className="mx-auto my-4">
       <MDBCol>
-        <MDBCard className="mx-auto" style={{ width: '19rem' }}>
+        <MDBCard style={{ width: '25rem' }}>
           <MDBCardImage src={props.src} alt={props.name} hover top />
           <MDBCardBody>
-            <MDBCardTitle tag="h3" className="text-uppercase">
+            <MDBCardTitle tag="h4" className="text-uppercase">
               {props.name}
             </MDBCardTitle>
             <MDBCardText tag="div" className="blue-gray-text">
