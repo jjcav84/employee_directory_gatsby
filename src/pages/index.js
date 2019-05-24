@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet'
 // internal component imports
 import Layout from '../components/layout'
 import Card from '../components/card'
+import CardRow from '../components/row'
 
 // for inline styling of h1 tag
 const h1Style = {
@@ -15,12 +16,40 @@ const h1Style = {
 
 // React index component
 const IndexPage = props => {
-  const src = props.data.rickAndMortyAPI.characters.results[0].image
-  const name = props.data.rickAndMortyAPI.characters.results[0].name
-  const status = props.data.rickAndMortyAPI.characters.results[0].status
-  const species = props.data.rickAndMortyAPI.characters.results[0].species
-  const gender = props.data.rickAndMortyAPI.characters.results[0].gender
-  const id = props.data.rickAndMortyAPI.characters.results[0].id
+  const cards = props.data.rickAndMortyAPI.characters.results
+
+  const displayCards = () => {
+    const cardArray = []
+    let cardRow = []
+    let count = 0
+
+    cards.map(card => {
+      if (card) {
+        cardArray.push(card)
+      }
+    })
+
+    return cardArray.map(card => {
+      if (cardRow.length === 4) {
+        cardRow = []
+      }
+
+      cardRow.push(card)
+      count++
+
+      if (cardRow.length === 4) {
+        return returnRow(cardRow, count)
+      } else if (cardArray.length - count === 0) {
+        return returnRow(cardRow, count)
+      }
+    })
+  }
+
+  const returnRow = (cards, count) => {
+    return <CardRow cards={cards} id={count} />
+  }
+
+  console.log(props)
 
   return (
     <Layout>
@@ -33,9 +62,7 @@ const IndexPage = props => {
       </Helmet>
       <div style={h1Style} className="text-center pb-4">
         <h1>{props.data.site.siteMetadata.title}</h1>
-      </div>
-      <div className="pb-4">
-        <Card src={src} name={name} status={status} species={species} gender={gender} id={id} />
+        {displayCards()}
       </div>
     </Layout>
   )
