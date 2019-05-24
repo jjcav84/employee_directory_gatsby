@@ -15,7 +15,13 @@ const h1Style = {
 
 // React index component
 const IndexPage = props => {
-  console.log(props)
+  const src = props.data.rickAndMortyAPI.characters.results[0].image
+  const name = props.data.rickAndMortyAPI.characters.results[0].name
+  const status = props.data.rickAndMortyAPI.characters.results[0].status
+  const species = props.data.rickAndMortyAPI.characters.results[0].species
+  const gender = props.data.rickAndMortyAPI.characters.results[0].gender
+  const id = props.data.rickAndMortyAPI.characters.results[0].id
+
   return (
     <Layout>
       <Helmet>
@@ -29,7 +35,7 @@ const IndexPage = props => {
         <h1>{props.data.site.siteMetadata.title}</h1>
       </div>
       <div className="pb-4">
-        <Card />
+        <Card src={src} name={name} status={status} species={species} gender={gender} id={id} />
       </div>
     </Layout>
   )

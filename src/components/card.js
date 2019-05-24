@@ -5,12 +5,13 @@ import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, 
 
 // card component to display employee's image and data pulled from the API
 const Card = props => {
-  const src = 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
-  const name = 'Rick Sanchez'
-  const status = 'Alive'
-  const species = 'Human'
-  const gender = 'Male'
-  const id = 1
+  // props passed from Index component graphql query to Rick and Morty API
+  const src = props.src
+  const name = props.name
+  const status = props.status
+  const species = props.species
+  const gender = props.gender
+  const id = props.id
 
   return (
     <MDBRow className="mx-auto">
@@ -18,19 +19,25 @@ const Card = props => {
         <MDBCard className="mx-auto" style={{ width: '19rem' }}>
           <MDBCardImage src={src} alt="employee picture" hover top />
           <MDBCardBody>
-            <MDBCardTitle tag="h3">{name}</MDBCardTitle>
-            <MDBCardText tag="div">
-              <div className="pb-2">
-                <span className="border-bottom border-dark">Status: {status}</span>
+            <MDBCardTitle tag="h3" className="text-uppercase">
+              {name}
+            </MDBCardTitle>
+            <MDBCardText tag="div" className="blue-gray-text">
+              <div className="d-flex justify-content-between">
+                <h5 className="border-bottom border-dark">Status:</h5>
+                <h5 className="border-bottom border-dark">{status}</h5>
               </div>
-              <div className="pb-2">
-                <span className="border-bottom border-dark">Species: {species}</span>
+              <div className="d-flex justify-content-between">
+                <h5 className="border-bottom border-dark">Species:</h5>
+                <h5 className="border-bottom border-dark">{species}</h5>
               </div>
-              <div className="pb-2">
-                <span className="border-bottom border-dark">Gender: {gender}</span>
+              <div className="d-flex justify-content-between">
+                <h5 className="border-bottom border-dark">Gender:</h5>
+                <h5 className="border-bottom border-dark">{gender}</h5>
               </div>
-              <div className="pb-2">
-                <span className="border-bottom border-dark">Employee ID: {id}</span>
+              <div className="d-flex justify-content-between">
+                <h5 className="border-bottom border-dark">Employee ID:</h5>
+                <h5 className="border-bottom border-dark">{id}</h5>
               </div>
             </MDBCardText>
           </MDBCardBody>
@@ -46,7 +53,7 @@ Card.propTypes = {
   status: PropTypes.string,
   species: PropTypes.string,
   gender: PropTypes.string,
-  id: PropTypes.number
+  id: PropTypes.string
 }
 
 export default Card
