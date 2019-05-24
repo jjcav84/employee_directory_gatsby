@@ -9,7 +9,7 @@ import CardRow from '../components/row'
 
 // for inline styling of h1 tag
 const h1Style = {
-  marginTop: '150px',
+  marginTop: '140px',
   marginBottom: '-15px'
 }
 
