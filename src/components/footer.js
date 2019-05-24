@@ -1,10 +1,10 @@
 // internal imports
-import React from 'react'
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdbreact'
+import React from "react"
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact"
 
 // React footer component
 class Footer extends React.Component {
-  render () {
+  render() {
     return (
       <MDBFooter
         color="blue darken-1"
@@ -18,10 +18,13 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: '165px' }}
+                style={{ width: "165px" }}
               />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nulla at velit varius finibus. Pellentesque porttitor faucibus felis, quis aliquet odio mattis vitae. Donec at convallis nisi. Vestibulum nec sagittis quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                eget nulla at velit varius finibus. Pellentesque porttitor
+                faucibus felis, quis aliquet odio mattis vitae. Donec at
+                convallis nisi. Vestibulum nec sagittis quam.
               </p>
             </MDBCol>
             <MDBCol md="2" className="mb-4">
@@ -30,7 +33,7 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: '85px' }}
+                style={{ width: "85px" }}
               />
               <p>
                 <a href="https://linkedin.com/jacobjessecavazos/">
@@ -50,7 +53,7 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: '108px' }}
+                style={{ width: "108px" }}
               />
               <p>
                 <a href="https://mdbootstrap.com/material-design-for-bootstrap/?utm_ref_id=38136">
@@ -58,9 +61,7 @@ class Footer extends React.Component {
                 </a>
               </p>
               <p>
-                <a href="https://gatsbyjs.org">
-                  Gatsby
-                </a>
+                <a href="https://gatsbyjs.org">Gatsby</a>
               </p>
             </MDBCol>
             <MDBCol md="3" className="mb-4">
@@ -69,7 +70,7 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: '73px' }}
+                style={{ width: "73px" }}
               />
               <p>
                 <i className="fa fa-envelope mr-3" />
