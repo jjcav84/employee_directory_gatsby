@@ -6,38 +6,38 @@ import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, 
 // card component to display employee's image and data pulled from the API
 const Card = props => {
   // props passed from Index component graphql query to Rick and Morty API
-  const src = props.src
-  const name = props.name
-  const status = props.status
-  const species = props.species
-  const gender = props.gender
-  const id = props.id
+  /*  const src = card.results.image
+  const name = card.name
+  const status = card.status
+  const species = card.species
+  const gender = card.gender
+  const id = card.id */
 
   return (
     <MDBRow className="mx-auto">
       <MDBCol>
         <MDBCard className="mx-auto" style={{ width: '19rem' }}>
-          <MDBCardImage src={src} alt="employee picture" hover top />
+          <MDBCardImage src={props.src} alt={props.name} hover top />
           <MDBCardBody>
             <MDBCardTitle tag="h3" className="text-uppercase">
-              {name}
+              {props.name}
             </MDBCardTitle>
             <MDBCardText tag="div" className="blue-gray-text">
               <div className="d-flex justify-content-between">
                 <h5 className="border-bottom border-dark">Status:</h5>
-                <h5 className="border-bottom border-dark">{status}</h5>
+                <h5 className="border-bottom border-dark">{props.status}</h5>
               </div>
               <div className="d-flex justify-content-between">
                 <h5 className="border-bottom border-dark">Species:</h5>
-                <h5 className="border-bottom border-dark">{species}</h5>
+                <h5 className="border-bottom border-dark">{props.species}</h5>
               </div>
               <div className="d-flex justify-content-between">
                 <h5 className="border-bottom border-dark">Gender:</h5>
-                <h5 className="border-bottom border-dark">{gender}</h5>
+                <h5 className="border-bottom border-dark">{props.gender}</h5>
               </div>
               <div className="d-flex justify-content-between">
                 <h5 className="border-bottom border-dark">Employee ID:</h5>
-                <h5 className="border-bottom border-dark">{id}</h5>
+                <h5 className="border-bottom border-dark">{props.id}</h5>
               </div>
             </MDBCardText>
           </MDBCardBody>
