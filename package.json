@@ -41,7 +41,7 @@
     "material-design",
     "material-design-for-bootstrap",
     "React",
-    "template"
+    "directory"
   ],
   "license": "MIT",
   "scripts": {
@@ -49,16 +49,22 @@
     "develop": "yarn develop",
     "start": "yarn run develop",
     "now-build": "gatsby build",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "babel-preset-gatsby": "^0.1.11",
     "eslint": "^5.13.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "react-test-renderer": "^16.8.6"
   }
 }
