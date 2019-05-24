@@ -8,7 +8,7 @@ const Card = props => {
   return (
     <MDBRow className="mx-auto my-4">
       <MDBCol>
-        <MDBCard style={{ width: '25rem' }}>
+        <MDBCard style={{ width: '24rem' }}>
           <MDBCardImage src={props.src} alt={props.name} hover top />
           <MDBCardBody>
             <MDBCardTitle tag="h4" className="text-uppercase">
