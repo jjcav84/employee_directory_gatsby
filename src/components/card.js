@@ -11,25 +11,25 @@ const Card = props => {
         <MDBCard style={{ width: '24rem' }}>
           <MDBCardImage src={props.src} alt={props.name} hover top />
           <MDBCardBody>
-            <MDBCardTitle tag="h4" className="text-uppercase">
+            <MDBCardTitle tag="h5" className="text-uppercase">
               {props.name}
             </MDBCardTitle>
             <MDBCardText tag="div" className="blue-gray-text">
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Status:</h5>
-                <h5 className="border-bottom border-dark">{props.status}</h5>
+                <h4 className="border-bottom border-dark">Status:</h4>
+                <h4 className="border-bottom border-dark">{props.status}</h4>
               </div>
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Species:</h5>
-                <h5 className="border-bottom border-dark">{props.species}</h5>
+                <h4 className="border-bottom border-dark">Species:</h4>
+                <h4 className="border-bottom border-dark">{props.species}</h4>
               </div>
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Gender:</h5>
-                <h5 className="border-bottom border-dark">{props.gender}</h5>
+                <h4 className="border-bottom border-dark">Gender:</h4>
+                <h4 className="border-bottom border-dark">{props.gender}</h4>
               </div>
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Employee ID:</h5>
-                <h5 className="border-bottom border-dark">{props.id}</h5>
+                <h4 className="border-bottom border-dark">Employee ID:</h4>
+                <h4 className="border-bottom border-dark">{props.id}</h4>
               </div>
             </MDBCardText>
           </MDBCardBody>
