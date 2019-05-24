@@ -16,20 +16,20 @@ const Card = props => {
             </MDBCardTitle>
             <MDBCardText tag="div" className="blue-gray-text">
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Status:</h5>
-                <h5 className="border-bottom border-dark">{props.status}</h5>
+                <h6 className="border-bottom border-dark">Status:</h6>
+                <h6 className="border-bottom border-dark">{props.status}</h6>
               </div>
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Species:</h5>
-                <h5 className="border-bottom border-dark">{props.species}</h5>
+                <h6 className="border-bottom border-dark">Species:</h6>
+                <h6 className="border-bottom border-dark">{props.species}</h6>
               </div>
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Gender:</h5>
-                <h5 className="border-bottom border-dark">{props.gender}</h5>
+                <h6 className="border-bottom border-dark">Gender:</h6>
+                <h6 className="border-bottom border-dark">{props.gender}</h6>
               </div>
               <div className="d-flex justify-content-between">
-                <h5 className="border-bottom border-dark">Employee ID:</h5>
-                <h5 className="border-bottom border-dark">{props.id}</h5>
+                <h6 className="border-bottom border-dark">Employee ID:</h6>
+                <h6 className="border-bottom border-dark">{props.id}</h6>
               </div>
             </MDBCardText>
           </MDBCardBody>
