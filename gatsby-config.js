@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Employee Directory',
     description: 'Rick and Morty Employee Directory built with React, MDbootstrap, Gatsby, and the Rick and Morty API',
-    siteUrl: 'https://example.com',
+    siteUrl: 'https://gatsbyemployeedirectory.netlify.com',
     author: 'Jacob Cavazos',
     keywords: 'React, Bootstrap, Gatsby, Material Design, directory, Rick and Morty API'
   },
