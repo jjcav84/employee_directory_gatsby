@@ -24,7 +24,7 @@ class Navbar extends Component {
         <MDBNavbar color="teal accent-2" light expand="md" fixed="top">
           <Link to="/">
             <Animation type="bounce" duration="2s">
-              <img src={src1} type="image/png" height="120" alt="logo" />
+              <img src={src1} type="image/png" height="110" alt="logo" />
             </Animation>
           </Link>
           <MDBNavbarToggler tag="button" className="aqua-gradient" onClick={this.toggleCollapse('navbarCollapse')} />
