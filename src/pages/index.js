@@ -9,8 +9,8 @@ import CardRow from "../components/row"
 
 // for inline styling of h1 tag
 const h1Style = {
-  marginTop: "140px",
-  marginBottom: "-15px",
+  marginTop: `120px`,
+  marginBottom: `-15px`,
 }
 
 // React index component
@@ -29,24 +29,23 @@ const IndexPage = props => {
     })
 
     return cardArray.map(card => {
-      if (cardRow.length === 3) {
+      if (cardRow.length === 4) {
         cardRow = []
       }
 
       cardRow.push(card)
       count++
 
-      if (cardRow.length === 3) {
+      if (cardRow.length === 4) {
         return returnRow(cardRow, count)
       } else if (cardArray.length - count === 0) {
         return returnRow(cardRow, count)
       }
+      return null
     })
   }
 
-  const returnRow = (cards, count) => {
-    return <CardRow cards={cards} key={count} />
-  }
+  const returnRow = (cards, count) => <CardRow cards={cards} key={count} />
 
   console.log(props)
 
@@ -63,7 +62,7 @@ const IndexPage = props => {
         <link rel="canonical" href={props.data.site.siteMetadata.siteUrl} />
       </Helmet>
       <div style={h1Style} className="text-center pb-4">
-        <h1>{props.data.site.siteMetadata.title}</h1>
+        <h1 className="display-3">{props.data.site.siteMetadata.title}</h1>
         {displayCards()}
       </div>
     </Layout>

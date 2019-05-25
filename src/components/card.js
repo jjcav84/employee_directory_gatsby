@@ -9,43 +9,46 @@ import {
   MDBCardText,
   MDBCol,
   MDBRow,
+  MDBAnimation,
 } from "mdbreact"
 
 // card component to display employee's image and data pulled from the API
-const Card = props => {
-  return (
+const Card = props => (
+  <div className="mx-auto">
     <MDBRow className="mx-auto my-4">
       <MDBCol>
-        <MDBCard style={{ width: "24rem" }}>
-          <MDBCardImage src={props.src} alt={props.name} hover top />
-          <MDBCardBody>
-            <MDBCardTitle tag="h5" className="text-uppercase">
-              {props.name}
-            </MDBCardTitle>
-            <MDBCardText tag="div" className="blue-gray-text">
-              <div className="d-flex justify-content-between">
-                <h6 className="border-bottom border-dark">Status:</h6>
-                <h6 className="border-bottom border-dark">{props.status}</h6>
-              </div>
-              <div className="d-flex justify-content-between">
-                <h6 className="border-bottom border-dark">Species:</h6>
-                <h6 className="border-bottom border-dark">{props.species}</h6>
-              </div>
-              <div className="d-flex justify-content-between">
-                <h6 className="border-bottom border-dark">Gender:</h6>
-                <h6 className="border-bottom border-dark">{props.gender}</h6>
-              </div>
-              <div className="d-flex justify-content-between">
-                <h6 className="border-bottom border-dark">Employee ID:</h6>
-                <h6 className="border-bottom border-dark">{props.id}</h6>
-              </div>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+        <MDBAnimation type="pulse" count={2} duration="1s" delay="1s">
+          <MDBCard style={{ width: `20rem` }}>
+            <MDBCardImage src={props.src} alt={props.name} hover top />
+            <MDBCardBody>
+              <MDBCardTitle tag="div" className="text-uppercase">
+                {props.name}
+              </MDBCardTitle>
+              <MDBCardText tag="div" small>
+                <div className="d-flex justify-content-between">
+                  <span className="border-bottom">Status:</span>
+                  <span className="border-bottom">{props.status}</span>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <span className="border-bottom">Species:</span>
+                  <span className="border-bottom">{props.species}</span>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <span className="border-bottom">Gender:</span>
+                  <span className="border-bottom">{props.gender}</span>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <span>Employee ID:</span>
+                  <span>{props.id}</span>
+                </div>
+              </MDBCardText>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBAnimation>
       </MDBCol>
     </MDBRow>
-  )
-}
+  </div>
+)
 
 Card.propTypes = {
   src: PropTypes.string,

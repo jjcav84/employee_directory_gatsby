@@ -2,9 +2,9 @@
 import React, { Component } from "react"
 import {
   MDBNavbar,
-  MDBNavbarNav,
+  /* MDBNavbarNav,
   MDBNavbarToggler,
-  MDBCollapse,
+  MDBCollapse, */
   Animation,
 } from "mdbreact"
 import { Link } from "gatsby"
@@ -15,33 +15,35 @@ import src1 from "../images/logo.png"
 // React component for navbar
 class Navbar extends Component {
   state = {
-    collapseID: "",
+    collapseID: ``,
   }
 
   toggleCollapse = collapseID => () =>
-    this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : "",
-    }))
+    this.setState(prevState => {
+      return {
+        collapseID: prevState.collapseID !== collapseID ? collapseID : ``,
+      }
+    })
 
   render() {
-    const overlay = (
+    /* const overlay = (
       <div
         id="sidenav-overlay"
-        onClick={this.toggleCollapse("navbarCollapse")}
+        onClick={this.toggleCollapse(`navbarCollapse`)}
       />
-    )
+    ) */
     return (
       <div id="navpage">
-        <MDBNavbar color="teal accent-2" light expand="md" fixed="top">
+        <MDBNavbar color="cyan accent-1" light expand="md" fixed="top">
           <Link to="/">
             <Animation type="bounce" duration="2s">
-              <img src={src1} type="image/png" height="100" alt="logo" />
+              <img src={src1} type="image/png" height="80" alt="logo" />
             </Animation>
           </Link>
-          <MDBNavbarToggler
+          {/* <MDBNavbarToggler
             tag="button"
             className="aqua-gradient"
-            onClick={this.toggleCollapse("navbarCollapse")}
+            onClick={this.toggleCollapse(`navbarCollapse`)}
           />
           <MDBCollapse
             id="navbarCollapse"
@@ -49,9 +51,9 @@ class Navbar extends Component {
             navbar
           >
             <MDBNavbarNav left />
-          </MDBCollapse>
+          </MDBCollapse> */}
         </MDBNavbar>
-        {this.state.collapseID && overlay}
+        {/*  {this.state.collapseID && overlay} */}
       </div>
     )
   }
