@@ -1,3 +1,34 @@
+require(`dotenv`).config({
+  path: `.env.production`,
+})
+
+const characterQuery = `{
+  rickAndMortyAPI {
+    characters {
+      results {
+        objectID: id
+        id
+        name
+        status
+        species
+        gender
+      }
+    }
+  }
+}`
+
+const queries = [
+  {
+    query: characterQuery,
+    transformer: ({ data }) =>
+      data.rickAndMortyAPI.characters.results.map(({ ...rest }) => {
+        return {
+          ...rest,
+        }
+      }),
+  },
+]
+
 // site metadata and gatsby plugin configuration file
 module.exports = {
   // metadata for site for use with graphql
@@ -9,6 +40,17 @@ module.exports = {
     keywords: `React, Bootstrap, Gatsby, Material Design, directory, Rick and Morty API`,
   },
   plugins: [
+    // algolia plugin for search
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
     // plugin to create _headers file for netlify
     `gatsby-plugin-netlify`,
     // plugin to create helmet component to inject code into head html tag
