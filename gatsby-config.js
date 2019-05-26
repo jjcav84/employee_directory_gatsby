@@ -38,7 +38,6 @@ module.exports = {
         short_name: `Directory`,
         start_url: `/`,
         display: `standalone`,
-        icon: `src/images/logo.png`,
       },
     },
     // plugin to automaticall create robots.txt file
