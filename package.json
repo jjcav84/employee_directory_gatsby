@@ -5,6 +5,7 @@
   "author": "Jacob Cavazos <jake@jacobcavazos.com>",
   "dependencies": {
     "@svgr/webpack": "^4.2.0",
+    "algoliasearch": "^3.33.0",
     "apollo-link": "^1.2.11",
     "apollo-utilities": "^1.2.1",
     "ci-info": "2.0.0",
@@ -33,6 +34,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-instantsearch-dom": "^5.6.0",
     "react-popper": "^0.8.0",
     "rickmortyapi": "^0.2.1",
     "ts-invariant": "0.3.2"
