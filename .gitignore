@@ -5,3 +5,4 @@ node_modules/
 *.tgz
 public/
 .env.development
+.env.production
