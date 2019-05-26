@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import algoliasearch from "algoliasearch/lite"
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
 
 // internal component imports
 import Layout from "../components/layout"
@@ -10,6 +12,11 @@ const h1Style = {
   marginTop: `150px`,
   marginBottom: `-15px`,
 }
+
+const searchClient = algoliasearch(
+  `ZN34FVCACI`,
+  `ad5f24f5113b88a37f5ef59f885599ff`
+)
 
 // React directory component
 const DirectoryPage = props => (
@@ -23,7 +30,17 @@ const DirectoryPage = props => (
       <meta name="keywords" content={props.data.site.siteMetadata.keywords} />
       <meta name="author" content={props.data.site.siteMetadata.author} />
       <link rel="canonical" href={props.data.site.siteMetadata.siteUrl} />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+        integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+        crossOrigin="anonymous"
+      />
     </Helmet>
+    <InstantSearch searchClient={searchClient} indexName="demo_ecommerce">
+      <SearchBox />
+      <Hits />
+    </InstantSearch>
     <div style={h1Style} className="text-center pb-4">
       <h1 className="display-3 deep-purple-text">
         Welcome to the Rick and Morty themed{` `}
@@ -46,6 +63,18 @@ export const pageQuery = graphql`
         description
         siteUrl
         keywords
+      }
+    }
+    rickAndMortyAPI {
+      characters {
+        results {
+          id
+          name
+          image
+          status
+          species
+          gender
+        }
       }
     }
   }

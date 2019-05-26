@@ -9,9 +9,10 @@ const characterQuery = `{
         objectID: id
         id
         name
-        status
-        species
+        image
         gender
+        species
+        status
       }
     }
   }
@@ -55,13 +56,6 @@ module.exports = {
     `gatsby-plugin-netlify`,
     // plugin to create helmet component to inject code into head html tag
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     // plugin enables automatic creation of sitemap.xml file at root/sitemap.xml
     `gatsby-plugin-sitemap`,

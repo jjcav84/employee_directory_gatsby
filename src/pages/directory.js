@@ -88,12 +88,6 @@ export const pageQuery = graphql`
     }
     rickAndMortyAPI {
       characters {
-        info {
-          count
-          pages
-          next
-          prev
-        }
         results {
           id
           name
