@@ -2,13 +2,13 @@
 import React from "react"
 
 // external component imports
-import Navbar from "./navbar"
+import Header from "./header"
 import Footer from "./footer"
 
 // React Layout component
 const Layout = ({ children }) => (
   <div>
-    <Navbar />
+    <Header />
     {children}
     <Footer />
   </div>
