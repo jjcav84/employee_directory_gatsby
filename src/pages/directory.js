@@ -47,8 +47,6 @@ const DirectoryPage = props => {
 
   const returnRow = (cards, count) => <CardRow cards={cards} key={count} />
 
-  console.log(props)
-
   return (
     <Layout>
       <Helmet>

@@ -10,15 +10,6 @@ import {
   Animation,
 } from "mdbreact"
 import { Link } from "gatsby"
-import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
-
-import ImagePreview from "./image-preview"
-
-const searchClient = algoliasearch(
-  `ZN34FVCACI`,
-  `ad5f24f5113b88a37f5ef59f885599ff`
-)
 
 // variable for styling of icon for logo
 const iconStyle = {
@@ -36,7 +27,6 @@ const iconStyle = {
 // React component for navbar
 class Header extends Component {
   state = {
-    activeItem: `1`,
     collapseID: ``,
   }
 
@@ -81,17 +71,6 @@ class Header extends Component {
                     </Animation>
                   </strong>
                 </Link>
-              </MDBNavItem>
-            </MDBNavbarNav>
-            <MDBNavbarNav right>
-              <MDBNavItem>
-                <InstantSearch
-                  searchClient={searchClient}
-                  indexName="Directory"
-                >
-                  <SearchBox />
-                  <Hits hitComponent={ImagePreview} />
-                </InstantSearch>
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>

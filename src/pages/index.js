@@ -3,14 +3,19 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
+import { MDBContainer } from "mdbreact"
 
 // internal component imports
-import Layout from "../components/layout"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import ImagePreview from "../components/image-preview"
+
+// import external css to hide the list item bullet
+import "./index.css"
 
 // for inline styling of h1 tag
 const h1Style = {
-  marginTop: `150px`,
-  marginBottom: `-15px`,
+  marginTop: `130px`,
 }
 
 const searchClient = algoliasearch(
@@ -20,7 +25,7 @@ const searchClient = algoliasearch(
 
 // React directory component
 const DirectoryPage = props => (
-  <Layout>
+  <div>
     <Helmet>
       <title>{props.data.site.siteMetadata.title}</title>
       <meta
@@ -30,26 +35,25 @@ const DirectoryPage = props => (
       <meta name="keywords" content={props.data.site.siteMetadata.keywords} />
       <meta name="author" content={props.data.site.siteMetadata.author} />
       <link rel="canonical" href={props.data.site.siteMetadata.siteUrl} />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
-        integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
-        crossOrigin="anonymous"
-      />
     </Helmet>
-    <InstantSearch searchClient={searchClient} indexName="demo_ecommerce">
-      <SearchBox />
-      <Hits />
-    </InstantSearch>
-    <div style={h1Style} className="text-center pb-4">
-      <h1 className="display-3 deep-purple-text">
-        Welcome to the Rick and Morty themed{` `}
-        {props.data.site.siteMetadata.title}
-      </h1>
+    <Header />
+    <div style={h1Style} className="text-center">
+      <MDBContainer>
+        <h1 className="display-3 deep-purple-text">
+          Welcome to the Rick and Morty{` `}
+          {props.data.site.siteMetadata.title}
+        </h1>
+      </MDBContainer>
     </div>
-  </Layout>
+    <InstantSearch searchClient={searchClient} indexName="Directory">
+      <div className="float-right pr-3 pt-3">
+        <SearchBox />
+      </div>
+      <Hits hitComponent={ImagePreview} />
+    </InstantSearch>
+    <Footer />
+  </div>
 )
-
 export default DirectoryPage
 
 // graphql query to site metadata in gatsby-config.js file
