@@ -1,5 +1,5 @@
 require(`dotenv`).config({
-  path: `./.env.production`,
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 const characterQuery = `{
@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
-        appId: `ZN34FVCACI`,
+        appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
         queries,
