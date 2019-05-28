@@ -3,12 +3,15 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
-import { MDBContainer } from "mdbreact"
+import { MDBContainer, MDBRow } from "mdbreact"
 
 // internal component imports
 import Header from "../components/header"
 import Footer from "../components/footer"
 import ImagePreview from "../components/image-preview"
+
+// import image from /src/images directory
+import algolia from "../images/search-by-algolia-light-background.png"
 
 // import external css to hide the list item bullet
 import "./index.css"
@@ -40,16 +43,23 @@ const DirectoryPage = props => (
     <div style={h1Style} className="text-center">
       <MDBContainer>
         <h1 className="display-3 deep-purple-text">
-          Welcome to the Rick and Morty{` `}
+          Welcome to the Rick and Morty themed{` `}
           {props.data.site.siteMetadata.title}
         </h1>
       </MDBContainer>
     </div>
     <InstantSearch searchClient={searchClient} indexName="Directory">
       <div className="float-right pr-3 pt-3">
-        <SearchBox />
+        <MDBRow>
+          <a href="https://algolia.com">
+            <img src={algolia} className="pr-1" />
+          </a>
+          <SearchBox />
+        </MDBRow>
       </div>
-      <Hits hitComponent={ImagePreview} />
+      <MDBContainer>
+        <Hits hitComponent={ImagePreview} />
+      </MDBContainer>
     </InstantSearch>
     <Footer />
   </div>

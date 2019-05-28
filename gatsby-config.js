@@ -1,5 +1,5 @@
 require(`dotenv`).config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${process.env.production}`,
 })
 
 const characterQuery = `{
@@ -61,11 +61,16 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     // this plugin enables image processing
     `gatsby-plugin-sharp`,
-    // plugin to aid with using SVG graphics
-    `gatsby-plugin-svgr`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     // plugin to automatically create manifest for PWA
     {
       resolve: `gatsby-plugin-manifest`,
