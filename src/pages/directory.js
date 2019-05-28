@@ -47,8 +47,6 @@ const DirectoryPage = props => {
 
   const returnRow = (cards, count) => <CardRow cards={cards} key={count} />
 
-  console.log(props)
-
   return (
     <Layout>
       <Helmet>
@@ -88,12 +86,6 @@ export const pageQuery = graphql`
     }
     rickAndMortyAPI {
       characters {
-        info {
-          count
-          pages
-          next
-          prev
-        }
         results {
           id
           name

@@ -27,7 +27,6 @@ const iconStyle = {
 // React component for navbar
 class Header extends Component {
   state = {
-    activeItem: `1`,
     collapseID: ``,
   }
 

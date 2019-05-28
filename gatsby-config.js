@@ -1,3 +1,35 @@
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const characterQuery = `{
+  rickAndMortyAPI {
+    characters {
+      results {
+        objectID: id
+        id
+        name
+        image
+        gender
+        species
+        status
+      }
+    }
+  }
+}`
+
+const queries = [
+  {
+    query: characterQuery,
+    transformer: ({ data }) =>
+      data.rickAndMortyAPI.characters.results.map(({ ...rest }) => {
+        return {
+          ...rest,
+        }
+      }),
+  },
+]
+
 // site metadata and gatsby plugin configuration file
 module.exports = {
   // metadata for site for use with graphql
@@ -9,10 +41,29 @@ module.exports = {
     keywords: `React, Bootstrap, Gatsby, Material Design, directory, Rick and Morty API`,
   },
   plugins: [
+    // algolia plugin for search
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
     // plugin to create _headers file for netlify
     `gatsby-plugin-netlify`,
     // plugin to create helmet component to inject code into head html tag
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    // plugin enables automatic creation of sitemap.xml file at root/sitemap.xml
+    `gatsby-plugin-sitemap`,
+    // this plugin enables image processing
+    `gatsby-plugin-sharp`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.app/offline
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,16 +71,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    // plugin enables automatic creation of sitemap.xml file at root/sitemap.xml
-    `gatsby-plugin-sitemap`,
-    // this plugin enables image processing
-    `gatsby-plugin-sharp`,
-    // plugin to aid with using SVG graphics
-    `gatsby-plugin-svgr`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    `gatsby-plugin-offline`,
     // plugin to automatically create manifest for PWA
     {
       resolve: `gatsby-plugin-manifest`,

@@ -1,19 +1,34 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import algoliasearch from "algoliasearch/lite"
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
+import { MDBContainer, MDBRow } from "mdbreact"
 
 // internal component imports
-import Layout from "../components/layout"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import ImagePreview from "../components/image-preview"
+
+// import image from /src/images directory
+import algolia from "../images/search-by-algolia-light-background.png"
+
+// import external css to hide the list item bullet
+import "./index.css"
 
 // for inline styling of h1 tag
 const h1Style = {
-  marginTop: `150px`,
-  marginBottom: `-15px`,
+  marginTop: `130px`,
 }
+
+const searchClient = algoliasearch(
+  `ZN34FVCACI`,
+  `ad5f24f5113b88a37f5ef59f885599ff`
+)
 
 // React directory component
 const DirectoryPage = props => (
-  <Layout>
+  <div>
     <Helmet>
       <title>{props.data.site.siteMetadata.title}</title>
       <meta
@@ -24,15 +39,31 @@ const DirectoryPage = props => (
       <meta name="author" content={props.data.site.siteMetadata.author} />
       <link rel="canonical" href={props.data.site.siteMetadata.siteUrl} />
     </Helmet>
-    <div style={h1Style} className="text-center pb-4">
-      <h1 className="display-3 deep-purple-text">
-        Welcome to the Rick and Morty themed{` `}
-        {props.data.site.siteMetadata.title}
-      </h1>
+    <Header />
+    <div style={h1Style} className="text-center">
+      <MDBContainer>
+        <h1 className="display-3 deep-purple-text">
+          Welcome to the Rick and Morty themed{` `}
+          {props.data.site.siteMetadata.title}
+        </h1>
+      </MDBContainer>
     </div>
-  </Layout>
+    <InstantSearch searchClient={searchClient} indexName="Directory">
+      <div className="float-right pr-5 pt-3">
+        <MDBRow>
+          <a href="https://algolia.com">
+            <img src={algolia} className="pr-2" />
+          </a>
+          <SearchBox />
+        </MDBRow>
+      </div>
+      <MDBContainer>
+        <Hits hitComponent={ImagePreview} />
+      </MDBContainer>
+    </InstantSearch>
+    <Footer />
+  </div>
 )
-
 export default DirectoryPage
 
 // graphql query to site metadata in gatsby-config.js file
@@ -46,6 +77,18 @@ export const pageQuery = graphql`
         description
         siteUrl
         keywords
+      }
+    }
+    rickAndMortyAPI {
+      characters {
+        results {
+          id
+          name
+          image
+          status
+          species
+          gender
+        }
       }
     }
   }
