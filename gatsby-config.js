@@ -1,5 +1,5 @@
 require(`dotenv`).config({
-  path: `.env.${process.env.production}`,
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 const characterQuery = `{

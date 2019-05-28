@@ -52,7 +52,7 @@ const DirectoryPage = props => (
       <div className="float-right pr-3 pt-3">
         <MDBRow>
           <a href="https://algolia.com">
-            <img src={algolia} className="pr-1" />
+            <img src={algolia} className="pr-2" />
           </a>
           <SearchBox />
         </MDBRow>
