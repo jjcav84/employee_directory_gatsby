@@ -29,7 +29,7 @@ class Header extends Component {
   state = {
     collapseID: ``,
   }
-
+  // function to enable hamburger button to open and close for mobile UI
   toggleCollapse = collapseID => () =>
     this.setState(prevState => {
       return {

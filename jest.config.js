@@ -1,3 +1,4 @@
+// configuration file for using jest specificially with gatsby configure code coverage and reporting
 const path = require(`path`)
 const glob = require(`glob`)
 const fs = require(`fs`)

@@ -5,6 +5,7 @@ import { MDBRow } from "mdbreact"
 // Exernal React component imports
 import Card from "./card"
 
+// React component to pass into Algolia's hit component to view card via search on landing page
 const ImagePreview = ({ hit }) => (
   <div className="pt-5">
     <MDBRow className="pr-3">
