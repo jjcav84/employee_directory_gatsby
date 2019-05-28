@@ -51,7 +51,7 @@ const DirectoryPage = props => (
     </div>
     <InstantSearch searchClient={searchClient} indexName="Directory">
       <MDBContainer>
-        <div className="float-right pr-1 pt-3">
+        <div className="float-right pt-2">
           <MDBRow>
             <a href="https://algolia.com">
               <img src={algolia} className="pr-1" />
