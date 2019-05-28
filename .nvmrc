@@ -1,2 +1,1 @@
-// mainly to tell Netlify what version of Node to use when building site during deployment
 10.15.3
