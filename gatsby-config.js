@@ -1,7 +1,9 @@
+//setup dotenv to pass environmental variables using dotenv npm package
 require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+// query character information for use with algolia search
 const characterQuery = `{
   rickAndMortyAPI {
     characters {
@@ -18,6 +20,7 @@ const characterQuery = `{
   }
 }`
 
+// array with currently one index for use with algolia search mapping and returning objects in results array
 const queries = [
   {
     query: characterQuery,
@@ -99,6 +102,7 @@ module.exports = {
         url: `https://rickandmortyapi.com/graphql`,
       },
     },
+    // TODO: implement google analytics tracking
     //  {
     //   resolve: `gatsby-plugin-google-analytics`,
     // options: {

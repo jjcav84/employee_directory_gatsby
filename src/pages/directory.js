@@ -17,6 +17,7 @@ const h1Style = {
 const DirectoryPage = props => {
   const cards = props.data.rickAndMortyAPI.characters.results
 
+  // Logic for programmatically building directory page out from single Card component into 20 card layout
   const displayCards = () => {
     const cardArray = []
     let cardRow = []

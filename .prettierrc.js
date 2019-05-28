@@ -1,3 +1,4 @@
+// configurtion for prettier following example on gatsby's main repository
 module.exports = {
   endOfLine: "lf",
   semi: false,

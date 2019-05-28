@@ -21,6 +21,7 @@ const h1Style = {
   marginTop: `130px`,
 }
 
+// algolia app ID and Public API Key for use on the front end do not use Admin API KEY here!!!
 const searchClient = algoliasearch(
   `ZN34FVCACI`,
   `ad5f24f5113b88a37f5ef59f885599ff`

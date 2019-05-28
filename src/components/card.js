@@ -12,7 +12,7 @@ import {
   MDBAnimation,
 } from "mdbreact"
 
-// card component to display employee's image and data pulled from the API
+// card component to display employee's image and data pulled from the GraphQL API
 const Card = props => (
   <div className="mx-auto">
     <MDBRow className="mx-auto my-4">
@@ -50,6 +50,7 @@ const Card = props => (
   </div>
 )
 
+// type checking
 Card.propTypes = {
   src: PropTypes.string,
   name: PropTypes.string,

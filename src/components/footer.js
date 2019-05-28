@@ -2,7 +2,7 @@
 import React from "react"
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact"
 
-// React footer component
+// React Footer component
 class Footer extends React.Component {
   render() {
     return (
@@ -18,7 +18,7 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "165px" }}
+                style={{ width: `165px` }}
               />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -33,7 +33,7 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "85px" }}
+                style={{ width: `85px` }}
               />
               <p>
                 <a href="https://linkedin.com/jacobjessecavazos/">
@@ -53,7 +53,7 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "108px" }}
+                style={{ width: `108px` }}
               />
               <p>
                 <a href="https://mdbootstrap.com/material-design-for-bootstrap/?utm_ref_id=38136">
@@ -70,7 +70,7 @@ class Footer extends React.Component {
               </h6>
               <hr
                 className="teal accent-1 mb-4 mt-0 d-inline-block mx-auto"
-                style={{ width: "73px" }}
+                style={{ width: `73px` }}
               />
               <p>
                 <i className="fa fa-envelope mr-3" />

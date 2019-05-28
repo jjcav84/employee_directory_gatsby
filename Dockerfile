@@ -1,3 +1,5 @@
+# File to build app into Docker container
+# TODO push this to my public Docker Hub account
 FROM node:10
 
 WORKDIR /usr/src/app
