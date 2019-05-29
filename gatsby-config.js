@@ -106,6 +106,12 @@ module.exports = {
         url: `https://rickandmortyapi.com/graphql`,
       },
     },
+    {
+      resolve: `gatsby-plugin-html-attributes`,
+      options: {
+        lang: `en`,
+      },
+    },
     // TODO: implement google analytics tracking
     //  {
     //   resolve: `gatsby-plugin-google-analytics`,
