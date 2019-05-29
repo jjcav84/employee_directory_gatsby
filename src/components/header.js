@@ -11,18 +11,8 @@ import {
 } from "mdbreact"
 import { Link } from "gatsby"
 
-// variable for styling of icon for logo
-const iconStyle = {
-  textShadow: `rgb(21, 95, 160) 0px 0px 0px, rgb(22, 99, 167) 1px 1px 0px, rgb(23, 103, 174) 2px 2px 0px, rgb(24, 107, 181) 3px 3px 0px, rgb(25, 112, 188) 4px 4px 0px, rgb(26, 116, 195) 5px 5px 0px, rgb(26, 120, 202) 6px 6px 0px, rgb(27, 124, 208) 7px 7px 0px, rgb(28, 128, 215) 8px 8px 0px, rgb(29, 132, 222) 9px 9px 0px`,
-  fontSize: `45px`,
-  color: `rgb(255, 255, 255)`,
-  height: `80px`,
-  width: `80px`,
-  lineHeight: `80px`,
-  borderRadius: `0%`,
-  textAlign: `center`,
-  backgroundColor: `rgb(30, 136, 229)`,
-}
+// import logo file
+import logo from "../images/logo.png"
 
 // React component for navbar
 class Header extends Component {
@@ -49,7 +39,7 @@ class Header extends Component {
         <MDBNavbar color="cyan accent-3" light expand="md" fixed="top">
           <Link to="/">
             <Animation type="bounce" duration="2s">
-              <i id="icon" className="fa fa-users" style={iconStyle} />
+              <img src={logo} height="80px" alt="Site Logo" />
             </Animation>
           </Link>
           <MDBNavbarToggler

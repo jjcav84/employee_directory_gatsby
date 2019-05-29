@@ -43,7 +43,7 @@ const DirectoryPage = props => (
     <Header />
     <div style={h1Style} className="text-center">
       <MDBContainer>
-        <h1 className="display-3 deep-purple-text">
+        <h1 className="display-4 deep-purple-text">
           Welcome to the Rick and Morty themed{` `}
           {props.data.site.siteMetadata.title}
         </h1>
@@ -54,7 +54,13 @@ const DirectoryPage = props => (
         <div className="float-right pt-2">
           <MDBRow>
             <a href="https://algolia.com">
-              <img src={algolia} className="pr-3" />
+              <img
+                src={algolia}
+                height="24px"
+                width="168px"
+                alt="algolia logo"
+                className="pr-3"
+              />
             </a>
             <SearchBox />
           </MDBRow>

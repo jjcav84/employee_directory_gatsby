@@ -61,7 +61,7 @@ const DirectoryPage = props => {
         <link rel="canonical" href={props.data.site.siteMetadata.siteUrl} />
       </Helmet>
       <div style={h1Style} className="text-center pb-4">
-        <h1 className="display-3 deep-purple-text">
+        <h1 className="display-4 deep-purple-text">
           {props.data.site.siteMetadata.title}
         </h1>
         {displayCards()}
