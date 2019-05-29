@@ -64,6 +64,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     // this plugin enables image processing
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-eslint`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     `gatsby-plugin-offline`,
