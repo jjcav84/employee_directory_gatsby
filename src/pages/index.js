@@ -91,9 +91,9 @@ export const pageQuery = graphql`
     rickAndMortyAPI {
       characters {
         results {
+          image
           id
           name
-          image
           status
           species
           gender
