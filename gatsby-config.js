@@ -37,11 +37,14 @@ const queries = [
 module.exports = {
   // metadata for site for use with graphql
   siteMetadata: {
-    title: `GatsbyJS Employee Directory`,
-    description: `Rick and Morty Employee Directory built with React, MDbootstrap, Gatsby, and the Rick and Morty API`,
+    title: `Gatsby Employee Directory`,
+    titleTemplate: `%s · Built with GraphQL`,
+    description: `Rick and Morty Employee Directory built with React, MDbootstrap, Gatsby, and the Rick and Morty GraphQL API`,
     siteUrl: `https://gatsbyemployeedirectory.netlify.com`,
     author: `Jacob Cavazos`,
-    keywords: `React, Bootstrap, Gatsby, Material Design, directory, Rick and Morty API`,
+    keywords: `React, Bootstrap, Gatsby, Material Design, directory, Rick and Morty API, GraphQL`,
+    image: `/src/images/logo.png`,
+    twitterUsername: `@jcavazos84`,
   },
   plugins: [
     // algolia plugin for search
