@@ -9,6 +9,7 @@ import { MDBContainer, MDBRow } from "mdbreact"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import ImagePreview from "../components/image-preview"
+import SEO from "../components/seo"
 
 // import image from /src/images directory
 import algolia from "../images/search-by-algolia-light-background.png"
@@ -38,11 +39,12 @@ const DirectoryPage = props => (
       />
       <meta name="keywords" content={props.data.site.siteMetadata.keywords} />
       <meta name="author" content={props.data.site.siteMetadata.author} />
-      <link rel="canonical" href={props.data.site.siteMetadata.siteUrl} />
+      <link rel="canonical" href={props.data.site.siteMetadata.url} />
     </Helmet>
     <Header />
+    <SEO />
     <div style={h1Style} className="text-center">
-      <MDBContainer>
+      <MDBContainer className="pt-3">
         <h1 className="display-4 deep-purple-text">
           Welcome to the Rick and Morty themed{` `}
           {props.data.site.siteMetadata.title}

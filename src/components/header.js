@@ -39,7 +39,7 @@ class Header extends Component {
         <MDBNavbar color="cyan accent-3" light expand="md" fixed="top">
           <Link to="/">
             <Animation type="bounce" duration="2s">
-              <img src={logo} height="80px" alt="Site Logo" />
+              <img src={logo} height="65px" alt="Site Logo" />
             </Animation>
           </Link>
           <MDBNavbarToggler
