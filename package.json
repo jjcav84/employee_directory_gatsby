@@ -84,7 +84,7 @@
     "jest-environment-jsdom-fourteen": "0.1.0",
     "jest-junit": "6.4.0",
     "jest-serializer-path": "0.1.15",
-    "lerna": "3.15.0",
+    "lerna": "3.20.2",
     "lint-staged": "8.2.1",
     "markdown-magic": "0.1.25",
     "npm-run-all": "4.1.5",
