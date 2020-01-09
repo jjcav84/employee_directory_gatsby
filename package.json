@@ -75,7 +75,7 @@
     "eslint-plugin-react": "7.17.0",
     "flow-bin": "0.115.0",
     "fs-extra": "7.0.1",
-    "gatsby-plugin-eslint": "2.0.5",
+    "gatsby-plugin-eslint": "2.0.8",
     "glob": "7.1.4",
     "husky": "2.3.0",
     "identity-obj-proxy": "3.0.0",
