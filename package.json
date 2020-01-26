@@ -42,7 +42,7 @@
     "webpack": "4.4.0"
   },
   "peerDependencies": {
-    "graphql": "0.13",
+    "graphql": "0.13 || 14.6",
     "react-router-dom": "^5.0.0",
     "webpack": "4.4.0"
   },
