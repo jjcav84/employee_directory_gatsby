@@ -39,12 +39,12 @@
     "react-router-dom": "5.2.0",
     "rickmortyapi": "0.2.1",
     "ts-invariant": "0.4.4",
-    "webpack": "4.4.0"
+    "webpack": "4.43.0"
   },
   "peerDependencies": {
     "graphql": "0.13",
     "react-router-dom": "^5.0.0",
-    "webpack": "4.4.0"
+    "webpack": "4.43.0"
   },
   "keywords": [
     "gatsby",
