@@ -37,7 +37,7 @@
     "react-instantsearch-dom": "5.7.0",
     "react-popper": "1.3.7",
     "react-router-dom": "5.2.0",
-    "rickmortyapi": "0.2.1",
+    "rickmortyapi": "0.3.0",
     "ts-invariant": "0.4.4",
     "webpack": "4.43.0"
   },
