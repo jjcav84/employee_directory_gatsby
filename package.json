@@ -62,7 +62,7 @@
     "babel-jest": "24.9.0",
     "babel-preset-gatsby": "0.1.11",
     "chokidar": "3.4.0",
-    "cross-env": "5.2.1",
+    "cross-env": "7.0.3",
     "eslint": "5.16.0",
     "eslint-config-google": "0.14.0",
     "eslint-config-prettier": "6.11.0",
