@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "Jacob Cavazos <jake@jacobcavazos.com>",
   "dependencies": {
-    "algoliasearch": "3.35.1",
+    "algoliasearch": "4.9.3",
     "apollo-link": "1.2.13",
     "apollo-utilities": "1.3.3",
     "ci-info": "2.0.0",
